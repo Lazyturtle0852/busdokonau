@@ -9,7 +9,7 @@ class handler(BaseHTTPRequestHandler):
         self.wfile.write(message.encode())
         return 
 from urllib import request 
-from bs4 import BeautifulSoup 
+from _bs4 import BeautifulSoup 
 url = 'http://real.kanachu.jp/pc/displayapproachinfo?uid=selectstop&fNM=%8F%C3%93%EC%91%E4%89w%90%BC%8C%FB&tNM=%8Cc%89%9E%91%E5%8Aw&fNO=24096&tNO=24200&x=71&y=25'
 response = request.urlopen(url)
 soup = BeautifulSoup(response)
