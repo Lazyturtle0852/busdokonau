@@ -7,7 +7,10 @@ class handler(BaseHTTPRequestHandler):
         self.send_response(200)
         self.send_header('Content-type','text/plain')
         self.end_headers()
-            message = "Sucsess"
+        if "name" in dic:
+            message = "Hello, " + dic["name"] + "!"
+        else:
+            message = "Hello, stranger!"
         self.wfile.write(message.encode())
         return
 		
