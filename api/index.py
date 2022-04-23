@@ -25,30 +25,5 @@ try:
 except AttributeError:
   businfo1 = '本日の運行は終了しました。'
 message = businfo1
-try:
-  bustime2 = soup.select_one('#main > div.frameArea01 > div > div > div:nth-of-type(6) > div.col02 > div.frameBox03 > p').get_text(strip=True)
-  buskind2 = soup.select_one('#main > div.frameArea01 > div > div > div:nth-of-type(6) > div.col01 > table:nth-of-type(2) > tbody').get_text(strip=True)
-
-  if "ツインライナー" in buskind2:
-    buskind2 = "ツインライナー"
-  else:
-    buskind2 = "通常バス"
-  businfo2 = "二本目:"+buskind2+"での運行です。"+bustime2.replace('予定通り発車します','')
-  
-except AttributeError:
-  businfo2 = '本日の運行は終了しました。'
-message = businfo2
-try:
-  bustime3 = soup.select_one('#main > div.frameArea01 > div > div > div:nth-of-type(8) > div.col02 > div.frameBox03 > p').get_text(strip=True)
-  buskind3 = soup.select_one('#main > div.frameArea01 > div > div > div:nth-of-type(8) > div.col01 > table:nth-of-type(2) > tbody').get_text(strip=True)
-  if "ツインライナー" in buskind3:
-    buskind3 = "ツインライナー"
-  else:
-    buskind3 = "通常バス"
-  businfo3 = "三本目:"+buskind3+"での運行です。"+bustime3.replace('予定通り発車します','')
-except AttributeError:
-  businfo3 = '本日の運行は終了しました。'
-message = businfo3
-
 		
 
