@@ -35,7 +35,7 @@ class handler(BaseHTTPRequestHandler):
           businfo2 = "二本目:"+buskind2+"での運行です。"+bustime2.replace('予定通り発車します','') 
         except AttributeError:
           businfo2 = '本日の運行は終了しました。'
-        message= businfo2
+        message= businfo2.encode("shift-jis").decode("utf-8", errors="ignore")
         self.wfile.write(message.encode())
 
         try:
