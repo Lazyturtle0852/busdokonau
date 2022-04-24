@@ -1,2 +1,1 @@
-cowpy==1.0.3
 beautifulsoup4==4.6.0 
