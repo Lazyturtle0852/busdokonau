@@ -51,4 +51,4 @@ try:
 except AttributeError:
   businfo3 = '本日の運行は終了しました。'
 message= businfo3
-		
+self.wfile.write(message.encode())
