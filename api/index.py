@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*- 
+# -*- coding: cp932 -*- 
 from http.server import BaseHTTPRequestHandler
 class handler(BaseHTTPRequestHandler):
 
