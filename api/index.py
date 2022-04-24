@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-file_data = open(file, 'r',　encoding="utf-8")
 from http.server import BaseHTTPRequestHandler
 class handler(BaseHTTPRequestHandler):
     def do_GET(self):
