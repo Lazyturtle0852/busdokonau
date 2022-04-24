@@ -28,4 +28,4 @@ class handler(BaseHTTPRequestHandler):
         except AttributeError:
           businfo1 = '本日の運行は終了しました。'
         message = businfo1
-        self.wfile.write(message.encode())
+        self.wfile.write(message.encode('utf-8'))
