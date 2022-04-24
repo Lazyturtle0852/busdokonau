@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# -*- coding: Shift_JIS -*-
 from http.server import BaseHTTPRequestHandler
 class handler(BaseHTTPRequestHandler):
     def do_GET(self):
