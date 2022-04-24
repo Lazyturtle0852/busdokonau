@@ -23,7 +23,7 @@ class handler(BaseHTTPRequestHandler):
         except AttributeError:
           businfo1 = '本日の運行は終了しました。'
         message= businfo1.encode('unicode-escape')
-        self.wfile.write(message.decode())
+        self.wfile.write(message)
         try:
           bustime2 = soup.select_one('#main > div.frameArea01 > div > div > div:nth-of-type(6) > div.col02 > div.frameBox03 > p').get_text(strip=True)
           buskind2 = soup.select_one('#main > div.frameArea01 > div > div > div:nth-of-type(6) > div.col01 > table:nth-of-type(2) > tbody').get_text(strip=True)
@@ -36,7 +36,7 @@ class handler(BaseHTTPRequestHandler):
         except AttributeError:
           businfo2 = '本日の運行は終了しました。'
         message= businfo2.encode('unicode-escape')
-        self.wfile.write(message.decode())
+        self.wfile.write(message)
 
         try:
           bustime3 = soup.select_one('#main > div.frameArea01 > div > div > div:nth-of-type(8) > div.col02 > div.frameBox03 > p').get_text(strip=True)
@@ -49,5 +49,5 @@ class handler(BaseHTTPRequestHandler):
         except AttributeError:
           businfo3 = '本日の運行は終了しました。'
         message= businfo3.encode('unicode-escape')
-        self.wfile.write(message.decode())
+        self.wfile.write(message)
 
