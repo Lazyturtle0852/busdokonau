@@ -8,7 +8,7 @@ class handler(BaseHTTPRequestHandler):
         self.send_header('Content-type','text/plain')
         self.end_headers()
         message = cow.Cowacter().milk('Hello from Python from a Serverless Function!')
-	self.wfile.write(message.encode())
+        self.wfile.write(message.encode())
         return
 from urllib import request 
 from bs4 import BeautifulSoup  
