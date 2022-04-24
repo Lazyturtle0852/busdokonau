@@ -35,7 +35,7 @@ class handler(BaseHTTPRequestHandler):
         except AttributeError:
           businfo2 = '本日の運行は終了しました。'
         message= businfo2
-        self.wfile.write(message.encode('utf-8'))
+        self.wfile.write(message.encode('utf-8').decode())
 
         try:
           bustime3 = soup.select_one('#main > div.frameArea01 > div > div > div:nth-of-type(8) > div.col02 > div.frameBox03 > p').get_text(strip=True)
