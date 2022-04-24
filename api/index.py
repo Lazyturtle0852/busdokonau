@@ -21,8 +21,8 @@ class handler(BaseHTTPRequestHandler):
           businfo1 = "一本目:"+buskind1+"での運行です。"+bustime1.replace('予定通り発車します','')
         except AttributeError:
           businfo1 = '本日の運行は終了しました。'
-        message= businfo1
-        self.wfile.write(message.encode('unicode-escape').decode())
+        message= businfo1.encode('unicode-escape')
+        self.wfile.write(message.decode(unicode-escape))
         try:
           bustime2 = soup.select_one('#main > div.frameArea01 > div > div > div:nth-of-type(6) > div.col02 > div.frameBox03 > p').get_text(strip=True)
           buskind2 = soup.select_one('#main > div.frameArea01 > div > div > div:nth-of-type(6) > div.col01 > table:nth-of-type(2) > tbody').get_text(strip=True)
@@ -34,8 +34,8 @@ class handler(BaseHTTPRequestHandler):
           businfo2 = "二本目:"+buskind2+"での運行です。"+bustime2.replace('予定通り発車します','') 
         except AttributeError:
           businfo2 = '本日の運行は終了しました。'
-        message= businfo2
-        self.wfile.write(message.encode('unicode-escape').decode())
+        message= businfo2.encode('unicode-escape')
+        self.wfile.write(message.decode(unicode-escape))
 
         try:
           bustime3 = soup.select_one('#main > div.frameArea01 > div > div > div:nth-of-type(8) > div.col02 > div.frameBox03 > p').get_text(strip=True)
@@ -47,6 +47,6 @@ class handler(BaseHTTPRequestHandler):
           businfo3 = "三本目:"+buskind3+"での運行です。"+bustime3.replace('予定通り発車します','')
         except AttributeError:
           businfo3 = '本日の運行は終了しました。'
-        message= businfo3
-        self.wfile.write(message.encode('unicode-escape').decode())
+        message= businfo3.encode('unicode-escape')
+        self.wfile.write(message.decode(unicode-escape))
 
