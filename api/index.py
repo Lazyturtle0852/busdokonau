@@ -8,6 +8,7 @@ class handler(BaseHTTPRequestHandler):
         self.send_header('Content-type','text/plain')
         self.end_headers()
         message = cow.Cowacter().milk('Hello from Python from a Serverless Function!')
+	self.wfile.write(message.encode())
         return
 from urllib import request 
 from bs4 import BeautifulSoup  
@@ -50,6 +51,7 @@ try:
 except AttributeError:
   businfo3 = '本日の運行は終了しました。'
 message= businfo3
-self.wfile.write(message.encode())
+print(message)
+
 
 		
