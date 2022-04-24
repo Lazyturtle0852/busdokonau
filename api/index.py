@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# -*- coding: cp1252 -*-
 from http.server import BaseHTTPRequestHandler
 from cowpy import cow
 
